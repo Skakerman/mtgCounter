@@ -1,14 +1,18 @@
 <GridLayout columns="*, *", rows="*" class="container" #container>
     <Label [text]="p1Health" col="0" row="0" class="health" #p1H></Label>
     <Label [text]="p2Health" col="1" row="0" class="health" #p2H></Label>
-    <GridLayout col="0" rows="*, auto, *" class="player" #P1Container>
-        <Button text="+" (tap)="plusHealth('p1Health')" col="0" row="0" class="iterator"></Button>
-        <Button text="-" (tap)="minusHealth('p1Health')" col="0" row="2" class="iterator"></Button>
+    <GridLayout col="0" rows="*, *" class="player" #P1Container>
+        <Button text='+' (tap)="plusHealth('p1Health')" col="0" row="0" class="iterator"></Button>
+        <Button text='-' (tap)="minusHealth('p1Health')" col="0" row="2" class="iterator"></Button>
     </GridLayout>
-    <GridLayout col="1" rows="*, auto, *" class="player" #P2Container>
-        <Button text="+" (tap)="plusHealth('p2Health')" col="1" row="0" class="iterator"></Button>
-        <Button text="-" (tap)="minusHealth('p2Health')" col="1" row="2" class="iterator"></Button>
+    <GridLayout col="1" rows="*, *" class="player" #P2Container>
+        <Button text='+' (tap)="plusHealth('p2Health')" col="1" row="0" class="iterator"></Button>
+        <Button text='-' (tap)="minusHealth('p2Health')" col="1" row="2" class="iterator"></Button>
     </GridLayout>
+    <!--<StackLayout col="2" class="player" #P2Container>
+        <Button (tap)="plusHealth('p2Health')" class="iterator"></Button>
+        <Button text="-" (tap)="minusHealth('p2Health')" class="iterator"></Button>
+    </StackLayout>-->
 </GridLayout>
 
 <!--<StackLayout class="p-20">
